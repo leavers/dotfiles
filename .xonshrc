@@ -1,0 +1,48 @@
+# pip install xonsh[full]
+
+# Auto load pyenv
+#
+# pip install xontrib-langenv
+xontrib load pyenv
+# xontrib load nodenv
+# xontrib load goenv
+# xontrib load rbenv
+
+# Use python in pipeline
+# Example(s)
+#
+# ls ~ | pl "print(line)"
+# pip install xontrib-pipeliner
+xontrib load pipeliner
+
+# Use `!` to execute bash, sh, zsh commands
+# Example(s)
+# ! echo 01.{05..10}
+# Or explicitly:
+# !b echo 01.{05..10}
+# !bash echo 01.{05..10}
+#
+# pip install xontrib-sh
+$XONTRIB_SH_SHELLS = ["bash", "sh"]
+xontrib load sh
+
+# nvm
+$NVM_DIR = f"{$HOME}/.nvm"
+$NVM_NODE_VERSION = "v20.10.0"
+$NVM_BIN = f"{$NVM_DIR}/versions/node/{$NVM_NODE_VERSION}/bin/"
+aliases["nvm"] = """bash -c @(f'[ -s "{$HOME}/.nvm/nvm.sh" ] && . "{$HOME}/.nvm/nvm.sh" && nvm {" ".join($args)}')"""
+aliases["node"] = f"{$NVM_DIR}/versions/node/{$NVM_NODE_VERSION}/bin/noder"
+aliases["npm"] = f"{$NVM_DIR}/versions/node/{$NVM_NODE_VERSION}/bin/npm"
+aliases["npx"] = f"{$NVM_DIR}/versions/node/{$NVM_NODE_VERSION}/bin/npx"
+
+# zvm
+$ZVM_INSTALL = f"{$HOME}/.zvm/self"
+$PATH.insert(0, f"{$HOME}/.zvm/bin")
+$PATH.insert(0, $ZVM_INSTALL)
+
+# bun.js
+$BUN_INSTALL = "$HOME/.bun"
+$PATH.insert(0, f"{$BUN_INSTALL}/bin")
+
+# customize prompt
+$PROMPT = '{env_name}{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE} {cwd}{branch_color}{curr_branch: {}}{RESET} {RED}{last_return_code_if_nonzero:[{BOLD_INTENSE_RED}{}{RED}]}{RESET}\n{BOLD_BLUE}{prompt_end}{RESET} '
