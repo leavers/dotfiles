@@ -31,7 +31,7 @@ $NVM_DIR = f"{$HOME}/.nvm"
 $NVM_NODE_VERSION = "v20.10.0"
 $NVM_BIN = f"{$NVM_DIR}/versions/node/{$NVM_NODE_VERSION}/bin/"
 aliases["nvm"] = """bash -c @(f'[ -s "{$HOME}/.nvm/nvm.sh" ] && . "{$HOME}/.nvm/nvm.sh" && nvm {" ".join($args)}')"""
-aliases["node"] = f"{$NVM_DIR}/versions/node/{$NVM_NODE_VERSION}/bin/noder"
+aliases["node"] = f"{$NVM_DIR}/versions/node/{$NVM_NODE_VERSION}/bin/node"
 aliases["npm"] = f"{$NVM_DIR}/versions/node/{$NVM_NODE_VERSION}/bin/npm"
 aliases["npx"] = f"{$NVM_DIR}/versions/node/{$NVM_NODE_VERSION}/bin/npx"
 
