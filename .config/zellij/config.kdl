@@ -257,12 +257,25 @@ themes {
         black "#181825" // Mantle
         white "#cdd6f4"
     }
+    ir_black {
+        bg "#000000" // Black
+        fg "#F1F1F1"
+        red "#FF6C60"
+        green "#A8FF60"
+        blue "#96CBFE"
+        yellow "#FFFFB6"
+        magenta "#FF73FD"
+        orange "#FA6C5F"
+        cyan "#C6C5FE"
+        black "#111111"
+        white "#EEEEEE"
+    }
 }
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "catppuccin-mocha"
+theme "ir_black"
 
 // The name of the default layout to load on startup
 // Default: "default", other: "compact"
