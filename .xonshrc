@@ -26,6 +26,9 @@ xontrib load pipeliner
 $XONTRIB_SH_SHELLS = ["bash", "sh"]
 xontrib load sh
 
+# oss
+aliases["oss"] = "aws --endpoint-url=http://oss-internal.i.brainpp.cn s3"
+
 # nvm
 $NVM_DIR = f"{$HOME}/.nvm"
 $NVM_NODE_VERSION = "v20.10.0"
