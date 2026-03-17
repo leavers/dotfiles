@@ -10,7 +10,9 @@ keybinds clear-defaults=true {
         bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
         bind "Alt Down" { MoveFocus "Down"; }
         bind "Alt Up" { MoveFocus "Up"; }
-        bind "Alt m" { ToggleFocusFullscreen; }
+        bind "Alt f" { ToggleFocusFullscreen; }
+        bind "Alt Shift h" { GoToPreviousTab; }
+        bind "Alt Shift l" { GoToNextTab; }
     }
     resize {
         bind "Ctrl n" { SwitchToMode "Normal"; }
@@ -151,7 +153,7 @@ keybinds clear-defaults=true {
         bind "Alt Up" { MoveFocus "Up"; }
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
-        bind "Alt m" { ToggleFocusFullscreen; }
+        bind "Alt f" { ToggleFocusFullscreen; }
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
         bind "Ctrl y" {
